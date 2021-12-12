@@ -9,6 +9,14 @@
 <body>
         <h1>Lorem</h1>
 
+          <input type="number" name="n1" id="n1">
+          <input type="number" name="n2" id="n2">
+          <input type="button" value="Somar" onclick="somar()">
+
+          <div id="resultado">
+            resultado
+          </div>
+
         <script>
             /*
           var nome =  prompt("qual seu nome?");
@@ -31,6 +39,23 @@
             var nome = prompt("digite seu nome ai lek");
             document.write(`seu nome tem ${nome.length} letras`);*/
 
+            function somar(){
+              var n1 = Number.parseInt(document.getElementById('n1').value);//com o document.get eu to acessando o meu elemento html, e com o .value eu acesso o valor dentro dele
+              var n2 = Number.parseInt(document.getElementById('n2').value);
+              //document.getElementById('n1').value
+              //var tn1 = document.getElementById('n1');
+              //var tn2 = document.getElementById('n2');
+
+              //var n1 = Number(tn1.value);
+              //var n2 = Number(tn2.value);
+
+              var res = n1+n2;
+
+              var resultado = document.getElementById('resultado');
+
+              resultado.innerText = `A soma entre ${n1} e ${n2} é ${res}`;
+
+            }
         </script>
 </body>
 </html>
